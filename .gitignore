@@ -47,3 +47,4 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 tc/
+logs/
