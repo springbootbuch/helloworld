@@ -10,16 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Application {
 
-    @RestController
-    @RequestMapping("/hello")
-    public static class HelloWorldController {
-        @GetMapping
-        public String helloWorld(@RequestParam final String name) {
-            return "Hello, " + name + "\n";
-        }
-    }
+	@RestController
+	@RequestMapping("/hello")
+	public static class HelloWorldController {
 
-    public static void main(String... args) {
-        SpringApplication.run(Application.class, args);
-    }
+		@GetMapping
+		public String helloWorld(
+			@RequestParam final String name) {
+			return "Hello, " + name + "\n";
+		}
+	}
+
+	public static void main(String... args) {
+		SpringApplication.run(Application.class, args);
+	}
 }

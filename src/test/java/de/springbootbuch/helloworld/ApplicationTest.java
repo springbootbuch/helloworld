@@ -15,14 +15,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest
 public class ApplicationTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-    
-    @Test
-    public void helloWorldShouldWork() throws Exception {
-        this.mockMvc
-                .perform(get("/hello").param("name", "World"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("Hello, World\n"));                
-    }
+	@Autowired
+	private MockMvc mockMvc;
+
+	@Test
+	public void helloWorldShouldWork() throws Exception {
+		this.mockMvc
+			.perform(
+				get("/hello").param("name", "World"))
+			.andExpect(status().isOk())
+			.andExpect(
+				content().string("Hello, World\n"));
+	}
 }
